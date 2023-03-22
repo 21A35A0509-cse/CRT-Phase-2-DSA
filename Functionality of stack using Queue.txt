@@ -1,0 +1,25 @@
+#Implement the functionality of stack only using queue 
+class  Queue:
+    def __init__(self):
+        self.temp=[]
+        self.original=[]
+        
+    def enqueue(self,ele):
+        self.temp.append(ele)                  #step 1
+        while len(self.original) !=0:          #step 2
+            pop_ele =self.original.pop(0)
+            self.temp.append(pop_ele)
+        while len(self.temp) !=0:              #step 3
+            pop_ele=self.temp.pop(0)
+            self.original.append(pop_ele)
+    def dequeue(self):
+        return self.original.pop(0)
+    def printQueue(self):
+        print("Temp: ",self.temp)
+        print("Original: ",self.original)
+        
+ob=Queue()
+ob.enqueue(1)
+ob.enqueue(2)
+ob.enqueue(3)
+ob.printQueue()
