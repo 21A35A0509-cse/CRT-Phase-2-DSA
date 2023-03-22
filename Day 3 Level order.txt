@@ -1,0 +1,11 @@
+#Level order Traversals
+def levelorder(self,root):
+    q=[]
+    q.append(root)
+    while len(q)!=0:
+        ele=q.pop(0)
+        print(ele.data, end=', ')
+        if ele.left:
+            q.append(ele.left)
+        if ele.right:
+            q.append(ele.right)
