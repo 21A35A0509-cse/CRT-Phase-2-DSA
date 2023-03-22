@@ -1,0 +1,17 @@
+#Implementation of Quick Sort
+def quick_sort(arr):
+    if len(arr)<=1:
+        return arr
+    
+    pivot=arr[0]   #Pivot is first element in arr which is arr[0]
+    left_arr=[i for i in arr[1:] if i<=pivot]  #Elements left of pivot are lesser than pivot
+    right_arr=[i for i in arr[1:] if i>pivot]  #Elements right of pivot are greater than pivot
+    
+    
+    return quick_sort(left_arr) + [pivot] + quick_sort(right_arr)
+
+arr=[30,20,50,40,10,20]
+print(arr)
+
+res=quick_sort(arr)
+print(res)
