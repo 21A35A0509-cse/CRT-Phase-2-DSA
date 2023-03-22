@@ -1,0 +1,23 @@
+class Node:
+    def __init__(self,value):
+        self.data = value
+        self.next= None
+class LinkedList:
+    def add_element(self,haed,value):
+        new_node =Node(value)
+        head.next =new_node
+        
+    def remove_element(self):
+        pass
+    def print_list(self,head):
+        temp=head
+        while temp!= None:
+            print(temp.data)
+            temp=temp.next
+            
+    def search_element(self,value):
+        pass
+obj=LinkedList()
+head=Node(10)
+obj.add_element(head, 20)
+obj.print_list(head)

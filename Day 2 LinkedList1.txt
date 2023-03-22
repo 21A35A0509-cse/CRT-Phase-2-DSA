@@ -1,0 +1,33 @@
+#Implementation of linkedlist
+class Node:
+    def __init__(self,value):
+        self.data = value
+        self.next= None
+class LinkedList:
+    def add_element(self,head,value):     #adding elements
+        new_node =Node(value) #Step1
+        temp=head
+        while temp.next !=None:  #Step2
+            temp=temp.next
+        temp.next=new_node #Step 3
+        
+    def remove_element(self,head,value):     #removing elements
+        temp=head
+        while temp.next.next !=None:  #Step1
+            temp=temp.next
+        temp.next=None #Step 2
+        
+    def print_list(self,head):
+        temp=head
+        while temp!= None:
+            print(temp.data)
+            temp=temp.next
+            
+    def serach_element(self,value):
+        pass
+obj=LinkedList()
+head=Node(10)
+obj.add_element(head, 20)
+obj.add_element(head,30)
+obj.remove_element(head,20)
+obj.print_list(head)
